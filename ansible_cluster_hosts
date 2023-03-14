@@ -1,0 +1,15 @@
+[master]
+ec2-54-171-138-121.eu-west-1.compute.amazonaws.com
+
+[worker]
+ec2-79-125-51-78.eu-west-1.compute.amazonaws.com
+
+[cluster:children]
+master
+worker
+
+[cluster:vars]
+ansible_ssh_user=ubuntu
+ansible_ssh_private_key_file=/home/ubuntu/keypair.pem
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
