@@ -1,0 +1,22 @@
+Exercises:
+
+The code can be found in my repo: https://github.com/akirkinis/DevOps4
+
+Questions:
+
+Ansible Play Failure:
+
+The problem lays with the names. In the playbook_example2.yml file we name them as [web-server1] and [web-server2] which is the format given at aws_hosts2, not aws_hosts1.
+
+Ansible Play Development:
+
+The command for it is the following
+ansible-playbook -i aws_hosts2 playbook_example2 --limit web-server2 --tags "start nginx"
+
+
+
+
+
+P.S.: I wish I had more time to elaborate on my answers and do more, but taking into consideration all the other assignments and deadlines, this is all I can do.
+
+Anthony Kirkinis - 14249413 
